@@ -1,0 +1,255 @@
+#websocket,#timer{
+    position:absolute;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    background:#7ab2c8
+  }
+  #websocket{
+    top:15%;
+    right:0.7rem;
+    height:2.2rem;
+    transform:translateY(-50%)
+  }
+  #timer{
+    top:50%;
+    left:0.7rem;
+    height:1rem;
+    transform:translateY(-50%)
+  }
+  #websocket:hover,button:hover{
+    box-shadow:0 4px 8px rgba(0,0,0,0.3);
+    opacity:0.8
+  }
+  .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .monitor {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .values {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+    width: 75px;
+  }
+  .values div {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .values .unit {
+    font-size: 0.6rem;
+  }
+  .values .et {
+    background-color: red;
+  }
+  .values .bt {
+    background-color: blue;
+  }
+  .values .heater {
+    background-color: red;
+  }
+  .values .fan {
+    background-color: purple;
+  }
+  .values .etRor {
+    background-color: pink;
+  }
+  .values .btRor {
+    background-color: green;
+  }
+  .roasterControl {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .roasterControl div {
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+  }
+  .roasterControl .start {
+    background-color: rgb(69 0 244);
+    margin-right: 2rem;
+    width: 7rem;
+  }
+  .roasterControl .stop {
+    background-color: red;
+    margin-right: 2rem;
+    width: 7rem;
+  }
+  .roasterControl .drum {
+    background-color: rgb(255, 98, 0);
+  }
+  .roasterControl .cooling {
+    background-color: blue;
+  }
+  .roasterControl .filter {
+    background-color: green;
+  }
+  .roasterControl .charge {
+    background-color: brown;
+  }
+  .roasterControl .drop {
+    background-color: orange;
+  }
+  .roasterControl button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+  }
+  .on {
+    border: 2px solid yellow;
+  }
+  .chart {
+    flex: 1;
+    align-items: center;
+    margin: 0;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .chart-container {
+    width: 100%;
+    position: relative;
+  }
+  .chart-top {
+    top: 0;
+    height: 70%;
+  }
+  .chart-bottom {
+    bottom: 0;
+    height: 30%;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #143642;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0a2933;
+  }
+  .controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto 2rem;
+    width: 100%;
+  }
+  .controlsSliderGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .controlsSliderGroup .sliderTitle{
+    font-size: 0.8rem;
+    margin: auto;
+    padding-right: 0.5rem;
+  }
+  .controlsSliderGroup .range {
+    width: 15rem;
+  }
+
+  .controlsSliderGroup .value {
+    width: 1.8rem;
+    height: 1.2rem;
+    color: #000000;
+    text-align: center;
+    border-radius: 3px;
+    background: #ffffff;
+    padding: 1px 5px;
+    font-size: 0.7rem;
+    border: solid 1px #cfcdff;
+  }
+
+  .controlsSliderGroup .sliderValue {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.4rem;
+  }
+
+  .controlsSliderGroup .spinBtn {
+    background: #4b66ac;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: auto 0.2rem;
+    padding: 0.2rem;
+    font-size: 0.6rem;
+    font-weight: normal;
+  }
+
+  #notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #143642;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  #notification.show {
+    display: block;
+    opacity: 1;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+    padding: 0;
+    margin: 0; /* 마진 제거 */
+  }
+
+  input[type="range"] {
+    margin: 0; /* 마진 제거 */
+    padding: 0; /* 필요 시 패딩도 제거 */
+    box-sizing: border-box; /* 요소의 크기 조정을 명확히 */
+  }
