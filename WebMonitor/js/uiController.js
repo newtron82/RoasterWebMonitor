@@ -20,9 +20,9 @@ function loadScripts(scripts) {
 function initPage() {
     createContentHtml();
     loadScripts([
-      'https://github.com/newtron82/RoasterWebMonitor/WebMonitor/js/chartManager.js', 
-      'https://github.com/newtron82/RoasterWebMonitor/WebMonitor/js/roasterManager.js',
-      'https://github.com/newtron82/RoasterWebMonitor/WebMonitor/js/websocketManager.js'
+      'https://newtron82.github.io/RoasterWebMonitor/WebMonitor/js/chartManager.js', 
+      'https://newtron82.github.io/RoasterWebMonitor/WebMonitor/js/roasterManager.js',
+      'https://newtron82.github.io/RoasterWebMonitor/WebMonitor/js/websocketManager.js'
     ])
     .then(() => {
         initChart();
